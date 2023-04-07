@@ -1,0 +1,14 @@
+{
+  "name": "chapter02",
+  "version": "1.0.0",
+  "description": "React live course, Chapter 02 Igniting our App Part 1",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Ayush Rastogi",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel": "^2.8.3"
+  }
+}
