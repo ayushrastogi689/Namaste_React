@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 
 // App Layout
 // 1. Header
@@ -39,7 +39,7 @@ const Title = () => (
 
 const HeaderComponent = () => {
     return(
-        <div>
+        <div className="header">
             <Title />
             <div className="nav-items">
             <ul>
@@ -53,9 +53,32 @@ const HeaderComponent = () => {
     );
 };
 
+const Body = () => {
+    return(
+        <h2>Body</h2>
+    );
+};
 
+const Footer = () => {
+    return(
+        <h2>Footer</h2>
+    );
+};
 
+// As JSX expression can have only one parent, and we dont want multiple extra <div>s in our code therefore
+// React.Fragement is a component which is exported by React. So that we don't have to use multiple <div>s
+// It is similar to an empty tag
+// <React.Fragement></React.Fragement> and <></> is one and the same thing.
 
+const AppLayout = () => {
+    return (
+        <>
+            <HeaderComponent />
+            <Body />
+            <Footer />
+        </>
+    )
+}
 
 
 
@@ -64,4 +87,4 @@ const HeaderComponent = () => {
 
 const creatingRoot = ReactDOM.createRoot(document.getElementById("root"));
 
-creatingRoot.render(<HeaderComponent />);
+creatingRoot.render(<AppLayout />);

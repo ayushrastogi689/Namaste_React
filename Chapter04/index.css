@@ -1,7 +1,27 @@
-#title {
-    color: brown;
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
 }
 
-#sub-title {
-    color: blue;
+.header {
+    display: flex;
+    border: 1px solid gray;
+    padding: 10px;
+    justify-content: space-between;
+}
+
+.nav-items{
+
+}
+
+.nav-items > ul {
+    list-style-type: none;
+    display: flex;
+    
+}
+
+.nav-items > ul > li {
+    padding: 20px;
 }
